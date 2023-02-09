@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rino's travelog</title>
+  <meta name="description" content="Rino's travelog" />
+  <!-- <meta name="keywords" content="draggable, menu, navigation, thumbnails, grid, javascript, gsap, web design, layout" /> -->
+  <meta name="author" content="Rino Kitimbo" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <link rel="stylesheet" href="https://use.typekit.net/crf4rue.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,20 +31,214 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <title>React App</title>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body class="loading">
+  <main>
+    <div class="frame">
+      <!-- <div class="frame__pagetitle">Draggable Menu with Grid Previews</div> -->
+      <div class="frame__title-wrap">
+        <h1 class="frame__title">Rino Kitimbo</h1>
+        <p class="frame__tagline">2021 &mdash; 2023</a></p>
+      </div>
+      <!-- <div class="frame__social">
+        <a href="#" aria-label="Link to Yuri's Behance profile"><img src="img/behance.svg" class="frame__social-behance" alt="Behance Logo"/></a>
+      </div> -->
+    </div>
+    <div class="page page--preview">
+      <div class="grid-wrap">
+        <div class="grid grid--layout-1">
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/1.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/2.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/3.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/4.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/5.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/6.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/7.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/8.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/9.jpg)"></div>
+          </div>
+        </div>
+        <div class="grid grid--layout-2">
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/10.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/11.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/12.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/13.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/14.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/15.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/16.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/17.jpg)"></div>
+          </div>
+        </div>
+        <div class="grid grid--layout-3">
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/18.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/19.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/20.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/21.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/22.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/23.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/24.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/42.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/43.jpg)"></div>
+          </div>
+        </div>
+        <div class="grid grid--layout-4">
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/25.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/26.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/27.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/28.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/29.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/30.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/31.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/32.jpg)"></div>
+          </div>
+        </div>
+        <div class="grid grid--layout-5">
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/33.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/34.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/35.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/36.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/37.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/38.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/39.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/40.jpg)"></div>
+          </div>
+          <div class="grid__item-wrap">
+            <div class="grid__item" style="background-image: url(img/41.jpg)"></div>
+          </div>
+        </div>
+        <button class="gridback"><svg width="27px" height="15px" viewBox="0 0 27 15">
+            <path
+              d="M1.469 6.75l-.719.719 7.938 6.937.718-.719L1.47 6.75zM8.594.531L.75 7.375l.688.688L9.28 1.218 8.594.53zM1.406 6.938v1h24.75v-1H1.406z"
+              fill="#de6565" />
+          </svg></button>
+      </div><!-- /grid-wrap -->
+    </div><!-- /page -->
+    <div class="menu-wrap">
+      <div class="menu-draggable"></div>
+      <nav class="menu">
+        <div class="menu__item">
+          <a class="menu__item-link">Jinja</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link">Kampala</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link">Gulu</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link">Kabale</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link">Kapchorwa</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link">Marchison</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+        <div class="menu__item">
+          <a class="menu__item-link">Fort Portal</a>
+          <a class="menu__item-explore">explore</a>
+        </div>
+      </nav><!--menu-->
+    </div><!--/menu-wrap-->
+  </main>
+  <div class="cursor">
+    <div class="cursor__inner cursor__inner--circle">
+      <div class="cursor__side cursor__side--left"></div>
+      <div class="cursor__side cursor__side--right"></div>
+    </div>
+  </div>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/charming.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/draggabilly.pkgd.min.js"></script>
+  <script src="js/demo.js"></script>
+</body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
 </html>
