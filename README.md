@@ -1,12 +1,12 @@
 # Project Name
 
-> Rino's Travelogue.
+> Rino's Travelogue Gallery.
 
 
 ## Built With
 
 - javascript, html and css
-- Frameworks
+- React.js
 - Technologies used
 
 ## Live Demo (if available)
