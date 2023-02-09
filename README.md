@@ -7,7 +7,6 @@
 
 - javascript, html and css
 - React.js
-- Technologies used
 
 ## Live Demo (if available)
 
