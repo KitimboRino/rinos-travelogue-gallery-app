@@ -2,8 +2,8 @@
   "name": "rinos-travelogue-gallery",
   "version": "0.1.0",
   "private": true,
-   "engines": {
-    "node": "25.x"
+  "engines": {
+    "node": "22.x"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
