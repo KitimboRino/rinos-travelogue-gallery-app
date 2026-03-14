@@ -24,3 +24,6 @@ yarn-error.log*
 
 .DS_Store
 *.zip
+
+# Image optimization cache — tracks which gallery images have been processed
+public/gallery/.optimized-manifest.json

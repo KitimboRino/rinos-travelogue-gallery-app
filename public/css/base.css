@@ -317,12 +317,9 @@ a:focus {
   background-position: 50% 50%;
   background-size: cover;
   will-change: transform;
-  -webkit-filter: grayscale(0) contrast(1) brightness(1);
-  filter: grayscale(0) contrast(1) brightness(1);
 }
 
 .page--preview .grid__item {
-  -webkit-filter: grayscale(0.5) contrast(0.4) brightness(1.5);
   filter: grayscale(0.5) contrast(0.4) brightness(1.5);
 }
 

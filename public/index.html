@@ -11,9 +11,11 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-  <link rel="stylesheet" href="https://use.typekit.net/crf4rue.css">
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preload" href="https://use.typekit.net/crf4rue.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://use.typekit.net/crf4rue.css"></noscript>
   <link rel="stylesheet" type="text/css" href="css/base.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
   <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 
 
@@ -31,7 +33,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
 </head>
 
 <body class="loading">
@@ -48,201 +49,208 @@
     </div>
     <div class="page page--preview">
       <div class="grid-wrap">
+        <!-- Jinja -->
         <div class="grid grid--layout-1">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-2.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-1.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-3.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-4.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-5.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/5.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-6.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/6.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-7.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/7.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-8.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/8.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-9.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/9.jpg"></div>
           </div>
         </div>
+        <!-- Kampala -->
         <div class="grid grid--layout-2">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-10.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-11.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-12.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-13.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-17.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/5.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-14.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/6.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-15.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/7.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(./gallery/img-16.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kampala/8.jpg"></div>
           </div>
         </div>
+        <!-- Gulu -->
         <div class="grid grid--layout-3">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/18.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/19.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/20.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/21.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/22.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/5.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/23.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/6.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/24.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/7.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/42.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/8.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/43.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/gulu/9.jpg"></div>
           </div>
         </div>
+        <!-- Kabale -->
         <div class="grid grid--layout-4">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/25.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kabale/1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/26.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kabale/2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/27.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/28.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/29.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/30.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/31.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/5.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/32.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/jinja/6.jpg"></div>
           </div>
         </div>
+        <!-- Kapchorwa -->
         <div class="grid grid--layout-5">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/33.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/7.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/34.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/8.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/35.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/9.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/36.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/k1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/37.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/k2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/38.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/k3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/39.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/k4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/40.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/k5.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/41.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/kapchorwa/k6.jpg"></div>
           </div>
         </div>
+        <!-- Marchison -->
         <div class="grid grid--layout-6">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/33.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/k7.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/34.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/k8.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/35.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/36.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/37.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/38.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/39.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/5.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/40.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/6.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/41.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/marchison/7.jpg"></div>
           </div>
         </div>
+        <!-- Fort Portal -->
         <div class="grid grid--layout-7">
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/33.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/g8.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/34.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/g9.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/35.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/ka1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/36.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/ka2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/37.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/j1.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/38.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/j2.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/39.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/j3.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/40.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/j4.jpg"></div>
           </div>
           <div class="grid__item-wrap">
-            <div class="grid__item" style="background-image: url(img/41.jpg)"></div>
+            <div class="grid__item" data-bg="./gallery/fortportal/j5.jpg"></div>
           </div>
         </div>
         <button class="gridback"><svg width="27px" height="15px" viewBox="0 0 27 15">
@@ -292,7 +300,6 @@
       <div class="cursor__side cursor__side--right"></div>
     </div>
   </div>
-  <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/charming.min.js"></script>
   <script src="js/TweenMax.min.js"></script>
   <script src="js/draggabilly.pkgd.min.js"></script>
