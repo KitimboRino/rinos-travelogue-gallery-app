@@ -300,6 +300,19 @@
       <div class="cursor__side cursor__side--right"></div>
     </div>
   </div>
+  <!-- Appwrite config — values injected from .env.local at build time -->
+  <script>
+    window.APPWRITE_ENDPOINT                = '%REACT_APP_APPWRITE_ENDPOINT%';
+    window.APPWRITE_PROJECT_ID              = '%REACT_APP_APPWRITE_PROJECT_ID%';
+    window.APPWRITE_BUCKET_ID               = '%REACT_APP_APPWRITE_BUCKET_ID%';
+    window.APPWRITE_DATABASE_ID             = '%REACT_APP_APPWRITE_DATABASE_ID%';
+    window.APPWRITE_LOCATIONS_COLLECTION_ID = '%REACT_APP_APPWRITE_LOCATIONS_COLLECTION_ID%';
+    window.APPWRITE_IMAGES_COLLECTION_ID    = '%REACT_APP_APPWRITE_IMAGES_COLLECTION_ID%';
+  </script>
+  <!-- Appwrite Web SDK (needed by appwrite-gallery.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@16/dist/iife/sdk.js"></script>
+  <!-- Dynamically builds gallery DOM from Appwrite data (no-op if config missing) -->
+  <script src="js/appwrite-gallery.js"></script>
   <script src="js/charming.min.js"></script>
   <script src="js/TweenMax.min.js"></script>
   <script src="js/draggabilly.pkgd.min.js"></script>
