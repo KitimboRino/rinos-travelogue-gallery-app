@@ -815,18 +815,6 @@
         });
     }, { rootMargin: '200px' });
 
-    // Eagerly load the first grid (it's visible immediately), lazy-load the rest
-    const allGridItems = [...document.querySelectorAll('.grid__item')];
-    const firstGridItems = [...document.querySelectorAll('.grid--layout-1 .grid__item')];
-
-    // Load first grid immediately so it's ready before the menu initialises
-    const loadFirstGrid = () => Promise.all(firstGridItems.map(el => loadBg(el)));
-
-    // Observe all non-first-grid items for lazy loading
-    allGridItems
-        .filter(el => !firstGridItems.includes(el))
-        .forEach(el => bgObserver.observe(el));
-
     /***********************************/
     /********** Preload stuff **********/
 
@@ -842,10 +830,24 @@
         });
     };
 
-    Promise.all([
-        loadFirstGrid(),
-        preloadFonts()
-    ]).then(() => {
+    // Wait for appwrite-gallery.js to finish building the DOM (if Appwrite is
+    // configured), then capture grid items and initialise lazy loading.
+    // Falls back immediately when Appwrite is not in use.
+    const galleryReady = window.__galleryReady || Promise.resolve();
+
+    galleryReady.then(() => {
+        // Capture grid items AFTER the dynamic DOM has been built
+        const allGridItems   = [...document.querySelectorAll('.grid__item')];
+        const firstGridItems = [...document.querySelectorAll('.grid--layout-1 .grid__item')];
+
+        // Eagerly load the first grid; lazy-load the rest
+        const loadFirstGrid = () => Promise.all(firstGridItems.map(el => loadBg(el)));
+        allGridItems
+            .filter(el => !firstGridItems.includes(el))
+            .forEach(el => bgObserver.observe(el));
+
+        return Promise.all([loadFirstGrid(), preloadFonts()]);
+    }).then(() => {
         // the Menu
         const menu = new Menu(document.querySelector('.menu-wrap'));
         document.body.classList.remove('loading');
