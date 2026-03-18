@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "optimize-images": "node scripts/optimize-images.js",
     "setup-appwrite": "node scripts/setup-appwrite.js",
-    "seed-appwrite": "node scripts/seed-appwrite.js",
+    "seed-appwrite": "ts-node --project scripts/tsconfig.json scripts/seed-appwrite.ts",
     "upload-to-appwrite": "node scripts/upload-to-appwrite.js"
   },
   "eslintConfig": {
@@ -44,7 +44,10 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
     "node-appwrite": "^14.0.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
