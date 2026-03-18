@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery Admin</title>
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preload" href="https://use.typekit.net/crf4rue.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://use.typekit.net/crf4rue.css"></noscript>
+  <link rel="stylesheet" href="/css/admin.css" />
+</head>
+<body>
+
+  <!-- ── Login ────────────────────────────────────────────────────────────── -->
+  <div id="login-screen">
+    <div class="login-card">
+      <h1>◆ Gallery <span>Admin</span></h1>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required />
+        </div>
+        <div id="login-error"></div>
+        <button type="submit" class="btn btn-primary btn-full" id="login-btn">Sign in</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ── App ──────────────────────────────────────────────────────────────── -->
+  <div id="app" hidden>
+
+    <header>
+      <div class="header-logo">◆ Gallery <span>Admin</span></div>
+      <div class="header-actions">
+        <a href="/" class="btn btn-ghost" target="_blank" rel="noopener">View Gallery ↗</a>
+        <button id="btn-logout" class="btn btn-ghost">Logout</button>
+      </div>
+    </header>
+
+    <div class="layout">
+
+      <!-- ── Sidebar ─────────────────────────────────────────────────────── -->
+      <aside>
+        <div class="sidebar-header">
+          <h2>Locations</h2>
+          <button class="btn btn-icon" id="btn-add-location" title="Add location">＋</button>
+        </div>
+        <ul id="locations-list"></ul>
+      </aside>
+
+      <!-- ── Main ────────────────────────────────────────────────────────── -->
+      <main id="main-content">
+        <div class="empty-state" id="empty-state">
+          <p>Select a location to manage its images.</p>
+        </div>
+
+        <!-- Location detail (hidden until a location is selected) -->
+        <div id="location-detail" hidden>
+          <div class="main-header">
+            <div>
+              <h2 id="detail-title"></h2>
+              <div class="sub" id="detail-sub"></div>
+            </div>
+            <button class="btn btn-primary" id="btn-upload">↑ Upload Images</button>
+          </div>
+          <div class="images-grid" id="images-grid"></div>
+        </div>
+
+        <!-- Upload panel (hidden until upload button clicked) -->
+        <div id="upload-panel" hidden>
+          <div class="main-header">
+            <div>
+              <h2>Upload to <span id="upload-panel-title"></span></h2>
+            </div>
+            <button class="btn btn-ghost" id="btn-cancel-upload">Cancel</button>
+          </div>
+          <div class="upload-drop" id="upload-drop">
+            <span class="upload-icon">⬆</span>
+            Click or drag &amp; drop images here
+            <br><small style="margin-top:8px;display:block;color:var(--muted)">JPG, PNG — multiple files supported</small>
+            <input type="file" id="upload-file-input" accept="image/*" multiple />
+          </div>
+          <ul class="upload-queue" id="upload-queue"></ul>
+          <div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end">
+            <button class="btn btn-primary" id="btn-start-upload" disabled>Upload All</button>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ── Modals ────────────────────────────────────────────────────────────── -->
+
+  <!-- Confirm delete -->
+  <div class="modal-backdrop" id="modal-confirm" hidden>
+    <div class="modal">
+      <h3 id="confirm-title">Confirm</h3>
+      <p id="confirm-body"></p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-danger" id="confirm-ok">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add location -->
+  <div class="modal-backdrop" id="modal-add-loc" hidden>
+    <div class="modal">
+      <h3>Add Location</h3>
+      <div class="field">
+        <label for="new-loc-name">Name</label>
+        <input id="new-loc-name" type="text" placeholder="e.g. Sipi Falls" />
+      </div>
+      <div id="add-loc-error" style="color:var(--accent);font-size:12px;min-height:16px;margin-bottom:10px"></div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="add-loc-cancel">Cancel</button>
+        <button class="btn btn-primary" id="add-loc-ok">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <!-- ── Config ───────────────────────────────────────────────────────────── -->
+  <script src="/js/appwrite-config.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@16/dist/iife/sdk.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
